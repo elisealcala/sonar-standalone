@@ -1,0 +1,8 @@
+body {
+  --green: #3DF2BC;
+  --red: #FF6885;
+  --background: rgba(255, 255, 255, 0.12);
+  --white: #FFFFFF
+  --gray-1: rgba(255, 255, 255, 0.08);
+  --gray-2: rgba(255, 255, 255, 0.4);
+}
