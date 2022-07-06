@@ -29,3 +29,8 @@
   color: var(--gray-2);
   cursor: pointer;
 }
+
+.input-amount {
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
