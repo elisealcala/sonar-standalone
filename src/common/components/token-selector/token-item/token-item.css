@@ -1,0 +1,22 @@
+.token-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.token-item-container .main-text {
+  display: flex;
+  align-items: center;
+}
+
+.token-item-container img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 0.75rem;
+  border-radius: 50%;
+}
+
+.token-item-container .secondary-text {
+  color: var(--gray-5)
+}
