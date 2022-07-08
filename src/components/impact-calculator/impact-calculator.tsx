@@ -3,6 +3,7 @@ import Input from "../../common/components/input";
 import Text from "../../common/components/text";
 import TokenSelector from "../../common/components/token-selector";
 import "./impact-calculator.css";
+import SearchExample from "./logic";
 
 export type Option = {
   value: string;
@@ -69,6 +70,7 @@ export const ImpactCalculator = () => {
           value={tokenSelected}
         />
       </div>
+      <SearchExample />
     </section>
   );
 };
