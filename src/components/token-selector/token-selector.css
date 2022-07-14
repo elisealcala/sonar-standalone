@@ -10,6 +10,10 @@
   cursor: pointer;
 }
 
+.token-value-container .token-item-container {
+  width: calc(100% - 20px);
+}
+
 .token-dropdown {
   position: absolute;
   top: 0;

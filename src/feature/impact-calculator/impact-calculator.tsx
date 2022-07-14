@@ -30,6 +30,7 @@ const binanceOption = {
 
 export const ImpactCalculator = () => {
   const [isBuying, setIsBuying] = useState(true);
+  const [value, setValue] = useState("10000");
   const [tokenSelected, setTokenSelected] = useState<Option>(binanceOption);
 
   return (
@@ -61,10 +62,10 @@ export const ImpactCalculator = () => {
         <Input
           className="input-amount"
           type="number"
-          value="10000"
+          value={value}
           icon="dollar"
           iconSize={12}
-          onChange={() => {}}
+          onChange={(e) => setValue(e.target.value)}
         />
         <TokenSelector
           onClickToken={(option) => setTokenSelected(option)}
