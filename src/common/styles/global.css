@@ -10,3 +10,11 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none; 
 }
+
+.app {
+  background: linear-gradient(180deg, #494FEC -6.23%, #270065 6.12%, #160A31 20.44%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,7 +4,7 @@ import ImpactCalculator from "./feature/impact-calculator";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <ImpactCalculator />
     </div>
   );
