@@ -37,7 +37,7 @@ export const Input: FC<IInputProps> = ({
 }) => {
   return (
     <div className={`input-container ${className}`}>
-      {icon ? renderIcon("search", iconSize) : null}
+      {icon ? renderIcon(icon, iconSize) : null}
       <input
         type={type}
         value={value}

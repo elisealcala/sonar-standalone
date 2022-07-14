@@ -1,10 +1,10 @@
 import { FC, useState, useEffect } from "react";
 import { io } from "socket.io-client";
-import { ArrowDownIcon } from "../../icons/arrow-down";
 import Dropdown from "./dropdown";
 import TokenItem from "./token-item";
 import "./token-selector.css";
 import type { Option } from "../../feature/impact-calculator/impact-calculator";
+import { CaretDownIcon } from "../../icons/caret-down";
 
 interface ITokenSelectorProps {
   value: Option | null;
@@ -68,7 +68,7 @@ export const TokenSelector: FC<ITokenSelectorProps> = ({
             mainText={value.symbol.toUpperCase()}
           />
         )}
-        <ArrowDownIcon />
+        <CaretDownIcon />
       </div>
       {isOpen && (
         <div className="token-dropdown">

@@ -32,6 +32,24 @@
 }
 
 .input-amount {
-  margin-bottom: 0.75rem;
-  margin-top: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.arrow-down {
+  margin: 0.75rem 0;
+  display: block;
+}
+
+.price-title {
+  opacity: 0.7;
+  margin: 0 0 0.75rem 0;
+}
+
+.percentage {
+  margin: 0.75rem 0;
+  color: var(--green)
+}
+
+.market-cap span {
+  opacity: 0.7;
 }

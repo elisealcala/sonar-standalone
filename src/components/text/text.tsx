@@ -1,6 +1,12 @@
 import React, { FC, ReactNode } from "react";
 
-type Type = "titleSm" | "bodyM" | "bodyLg";
+type Type = "titleSm" | "bodyM" | "bodyLg" | "title";
+
+type Style = {
+  fontSize: number;
+  lineHeight: string;
+  fontWeight: number;
+};
 
 interface ITextProps {
   type?: Type;
@@ -9,18 +15,26 @@ interface ITextProps {
   children: ReactNode;
 }
 
-const styles: Record<Type, { fontSize: number; lineHeight: string }> = {
+const styles: Record<Type, Style> = {
   titleSm: {
     fontSize: 20,
     lineHeight: "28px",
+    fontWeight: 400,
   },
   bodyM: {
     fontSize: 16,
     lineHeight: "22px",
+    fontWeight: 400,
   },
   bodyLg: {
     fontSize: 20,
     lineHeight: "28px",
+    fontWeight: 400,
+  },
+  title: {
+    fontSize: 32,
+    lineHeight: "22px",
+    fontWeight: 500,
   },
 };
 
