@@ -16,8 +16,12 @@ export const TokenItem: FC<ITokenItemProps> = ({
   return (
     <div className="token-item-container">
       <div className="main-text">
-        <img src={image} alt={mainText} />
-        <Text>{mainText}</Text>
+        {image ? (
+          <img src={image} alt={mainText} />
+        ) : (
+          <div className="placeholder-image" />
+        )}
+        <Text className="truncate">{mainText}</Text>
       </div>
       {secondaryText ? (
         <Text className="secondary-text">{secondaryText}</Text>

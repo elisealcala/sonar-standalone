@@ -3,33 +3,21 @@ import Input from "../../common/components/input";
 import Text from "../../common/components/text";
 import TokenSelector from "../../common/components/token-selector";
 import "./impact-calculator.css";
-import SearchExample from "./logic";
 
 export type Option = {
-  value: string;
-  label: string;
-  logo: string;
-  longName: string;
+  chainId: number;
+  contractAddress: string;
+  image: string;
+  name: string;
+  percentagePrice: number;
+  price: number;
+  symbol: string;
+  volume: number;
 };
-
-const options = [
-  {
-    value: "btc",
-    label: "BTC",
-    longName: "Bitcoin",
-    logo: "https://png.monster/wp-content/uploads/2022/02/png.monster-623.png",
-  },
-  {
-    value: "eth",
-    label: "ETH",
-    longName: "Ethereum",
-    logo: "https://w7.pngwing.com/pngs/268/1013/png-transparent-ethereum-eth-hd-logo-thumbnail.png",
-  },
-];
 
 export const ImpactCalculator = () => {
   const [isBuying, setIsBuying] = useState(true);
-  const [tokenSelected, setTokenSelected] = useState<Option>(options[0]);
+  const [tokenSelected, setTokenSelected] = useState<Option | null>(null);
 
   return (
     <section className="container">
@@ -63,14 +51,13 @@ export const ImpactCalculator = () => {
           value="10000"
           icon="dollar"
           iconSize={12}
+          onChange={() => {}}
         />
         <TokenSelector
           onClickToken={(option) => setTokenSelected(option)}
-          options={options}
           value={tokenSelected}
         />
       </div>
-      <SearchExample />
     </section>
   );
 };

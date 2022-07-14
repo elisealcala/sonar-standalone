@@ -17,6 +17,22 @@
   border-radius: 50%;
 }
 
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
 .token-item-container .secondary-text {
   color: var(--gray-5)
+}
+
+.token-item-container .placeholder-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  background-color: var(--gray-5);
 }

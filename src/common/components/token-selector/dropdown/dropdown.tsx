@@ -7,7 +7,9 @@ import "./dropdown.css";
 interface IDropdownProps {
   options: Option[];
   searchValue: string;
-  onChangeSearch: (value: string) => void;
+  onChangeSearch: (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => void;
   onClickToken: (option: Option) => void;
 }
 
@@ -24,20 +26,20 @@ export const Dropdown: FC<IDropdownProps> = ({
           placeholder="Search..."
           value={searchValue}
           icon="search"
-          onChange={(e) => onChangeSearch(e.target.value)}
+          onChange={onChangeSearch}
         />
       </div>
       <div className="list-container">
         {options.map((option) => (
           <div
             className="list-item"
-            key={option.label}
+            key={`${option.chainId}-${option.symbol}`}
             onClick={() => onClickToken(option)}
           >
             <TokenItem
-              image={option.logo}
-              mainText={option.longName}
-              secondaryText={option.label}
+              image={option.image}
+              mainText={option.name}
+              secondaryText={option.symbol.toUpperCase()}
             />
           </div>
         ))}
