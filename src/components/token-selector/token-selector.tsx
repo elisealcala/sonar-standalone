@@ -4,7 +4,7 @@ import { ArrowDownIcon } from "../../icons/arrow-down";
 import Dropdown from "./dropdown";
 import TokenItem from "./token-item";
 import "./token-selector.css";
-import type { Option } from "../../../components/impact-calculator/impact-calculator";
+import type { Option } from "../../feature/impact-calculator/impact-calculator";
 
 interface ITokenSelectorProps {
   value: Option | null;

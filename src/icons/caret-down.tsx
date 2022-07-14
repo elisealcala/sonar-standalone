@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { IIcon } from ".";
 
-export const ArrowDownIcon: FC<IIcon> = ({ size = 6, fill = "white" }) => {
+export const CaretDownIcon: FC<IIcon> = ({ size = 6, fill = "white" }) => {
   return (
     <svg
       width={1.83 * size}

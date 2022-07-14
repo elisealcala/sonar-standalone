@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Icons, ListIcons } from "../../icons";
+import { Icons } from "../../icons";
 import "./input.css";
 
 interface IInputProps {
@@ -8,12 +8,12 @@ interface IInputProps {
   placeholder?: string;
   disabled?: boolean;
   className?: string;
-  icon?: ListIcons;
+  icon?: keyof typeof Icons;
   iconSize?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const renderIcon = (icon: ListIcons, size?: number) => {
+const renderIcon = (icon: keyof typeof Icons, size?: number) => {
   const component = Icons[icon];
 
   return (
@@ -37,7 +37,7 @@ export const Input: FC<IInputProps> = ({
 }) => {
   return (
     <div className={`input-container ${className}`}>
-      {icon ? renderIcon(icon, iconSize) : null}
+      {icon ? renderIcon("search", iconSize) : null}
       <input
         type={type}
         value={value}

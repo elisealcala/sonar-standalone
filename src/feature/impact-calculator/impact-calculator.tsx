@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Input from "../../common/components/input";
-import Text from "../../common/components/text";
-import TokenSelector from "../../common/components/token-selector";
+import Input from "../../components/input";
+import Text from "../../components/text";
+import TokenSelector from "../../components/token-selector";
 import "./impact-calculator.css";
 
 export type Option = {

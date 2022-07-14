@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Input from "../../input";
 import TokenItem from "../token-item";
-import type { Option } from "../../../../components/impact-calculator/impact-calculator";
+import type { Option } from "../../../feature/impact-calculator/impact-calculator";
 import "./dropdown.css";
 
 interface IDropdownProps {
