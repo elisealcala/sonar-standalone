@@ -9,3 +9,13 @@
   justify-content: space-between;
   cursor: pointer;
 }
+
+.token-dropdown {
+  position: absolute;
+  top: 0;
+  background: var(--background);
+  height: 100%;
+  z-index: 2;
+  width: 100%;
+  margin: 0 -1rem;
+}

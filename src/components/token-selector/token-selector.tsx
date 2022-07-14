@@ -59,6 +59,8 @@ export const TokenSelector: FC<ITokenSelectorProps> = ({
     onClickToken(option);
   };
 
+  console.log(searchData);
+
   return (
     <div className="token-selector-container">
       <div className="token-value-container" onClick={() => setIsOpen(true)}>

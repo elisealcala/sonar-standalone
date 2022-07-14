@@ -16,9 +16,21 @@ export type Option = {
   volume: number;
 };
 
+const binanceOption = {
+  chainId: 56,
+  contractAddress: "bnb",
+  image:
+    "https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png?1547034615",
+  name: "Binance Coin",
+  percentagePrice: 5.48633,
+  price: 237.8,
+  symbol: "bnb",
+  volume: 1534065201,
+};
+
 export const ImpactCalculator = () => {
   const [isBuying, setIsBuying] = useState(true);
-  const [tokenSelected, setTokenSelected] = useState<Option | null>(null);
+  const [tokenSelected, setTokenSelected] = useState<Option>(binanceOption);
 
   return (
     <section className="container">
