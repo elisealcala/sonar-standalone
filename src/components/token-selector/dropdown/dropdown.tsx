@@ -11,6 +11,7 @@ interface IDropdownProps {
     e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
   onClickToken: (option: Option) => void;
+  clearValue: () => void;
 }
 
 export const Dropdown: FC<IDropdownProps> = ({
@@ -18,6 +19,7 @@ export const Dropdown: FC<IDropdownProps> = ({
   searchValue,
   onChangeSearch,
   onClickToken,
+  clearValue,
 }) => {
   return (
     <div className="dropdown-container">
@@ -27,6 +29,7 @@ export const Dropdown: FC<IDropdownProps> = ({
           value={searchValue}
           icon="search"
           onChange={onChangeSearch}
+          clearValue={clearValue}
         />
       </div>
       <div className="list-container">

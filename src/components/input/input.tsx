@@ -11,6 +11,7 @@ interface IInputProps {
   icon?: keyof typeof Icons;
   iconSize?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  clearValue?: () => void;
 }
 
 const renderIcon = (icon: keyof typeof Icons, size?: number) => {
@@ -34,6 +35,7 @@ export const Input: FC<IInputProps> = ({
   onChange,
   icon,
   iconSize,
+  clearValue,
 }) => {
   return (
     <div className={`input-container ${className}`}>
@@ -45,6 +47,11 @@ export const Input: FC<IInputProps> = ({
         onChange={onChange}
         disabled={disabled}
       />
+      {clearValue && value ? (
+        <span className="clear-value" onClick={clearValue}>
+          {renderIcon("clear", iconSize)}
+        </span>
+      ) : null}
     </div>
   );
 };

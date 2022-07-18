@@ -1,3 +1,4 @@
+import { ClearIcon } from "./clear";
 import { SearchIcon } from "./search";
 import { ArrowDownIcon } from "./arrow-down";
 import { CaretDownIcon } from "./caret-down";
@@ -15,4 +16,5 @@ export const Icons: Record<string, React.FC<IIcon>> = {
   "caret-down": CaretDownIcon,
   search: SearchIcon,
   "arrow-down": ArrowDownIcon,
+  clear: ClearIcon,
 };

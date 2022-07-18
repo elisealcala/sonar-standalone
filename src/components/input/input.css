@@ -30,3 +30,12 @@
   display: flex;
   margin-right: 0.75rem
 }
+
+.input-container .clear-value .input-icon {
+  margin-right: 0;
+}
+
+.input-container .clear-value {
+  margin-left: auto;
+  cursor: pointer;
+}
