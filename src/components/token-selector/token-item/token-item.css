@@ -10,6 +10,10 @@
   width: 100%;
 }
 
+.main-text.adjust {
+  width: calc(100% - 80px);
+}
+
 .token-item-container img {
   width: 24px;
   height: 24px;
@@ -28,6 +32,10 @@
 
 .token-item-container .secondary-text {
   color: var(--gray-5)
+}
+
+.secondary-text.truncate {
+  width: 60px;
 }
 
 .token-item-container .placeholder-image {

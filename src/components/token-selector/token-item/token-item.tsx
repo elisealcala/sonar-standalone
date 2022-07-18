@@ -15,7 +15,7 @@ export const TokenItem: FC<ITokenItemProps> = ({
 }) => {
   return (
     <div className="token-item-container">
-      <div className="main-text">
+      <div className={`main-text ${secondaryText ? "adjust" : ""}`}>
         {image ? (
           <img src={image} alt={mainText} />
         ) : (
@@ -24,7 +24,7 @@ export const TokenItem: FC<ITokenItemProps> = ({
         <Text className="truncate">{mainText}</Text>
       </div>
       {secondaryText ? (
-        <Text className="secondary-text">{secondaryText}</Text>
+        <Text className="secondary-text truncate">{secondaryText}</Text>
       ) : null}
     </div>
   );
