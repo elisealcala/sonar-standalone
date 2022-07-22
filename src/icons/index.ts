@@ -4,6 +4,7 @@ import { ArrowDownIcon } from "./arrow-down";
 import { CaretDownIcon } from "./caret-down";
 import { BitcoinIcon } from "./bitcoin";
 import { DollarIcon } from "./dollar";
+import { LogoIcon } from "./logo";
 
 export interface IIcon {
   size?: number;
@@ -17,4 +18,5 @@ export const Icons: Record<string, React.FC<IIcon>> = {
   search: SearchIcon,
   "arrow-down": ArrowDownIcon,
   clear: ClearIcon,
+  logo: LogoIcon
 };

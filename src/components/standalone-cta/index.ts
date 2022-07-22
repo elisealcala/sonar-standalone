@@ -1,0 +1,1 @@
+export { StandaloneCTA as default } from './standalone-cta'
