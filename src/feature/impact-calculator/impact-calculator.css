@@ -53,6 +53,10 @@
   color: var(--green)
 }
 
+.percentage.negative {
+  color: var(--red)
+}
+
 .market-cap span {
   opacity: 0.7;
 }

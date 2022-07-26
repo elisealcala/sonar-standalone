@@ -78,7 +78,11 @@ export const ImpactCalculator = () => {
           {`New ${tokenSelected?.symbol.toUpperCase()} price`}
         </Text>
         <Text type="title">0.0231</Text>
-        <Text className="percentage">+20%</Text>
+        {isBuying ? (
+          <Text className="percentage">+20%</Text>
+        ) : (
+          <Text className="percentage negative">-20%</Text>
+        )}
         <Text className="market-cap">
           <span>New Market Cap:</span> 23.3m
         </Text>
