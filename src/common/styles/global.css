@@ -17,8 +17,19 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
 }
 
 .app .cta-container {
   margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .app .cta-container {
+    margin-left: 0;
+  }
 }

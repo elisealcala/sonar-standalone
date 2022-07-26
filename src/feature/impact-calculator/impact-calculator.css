@@ -56,3 +56,11 @@
 .market-cap span {
   opacity: 0.7;
 }
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 300px;
+    width: calc(100% - 32px);
+    margin: 0 auto 2rem;
+  }
+}
