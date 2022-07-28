@@ -4,6 +4,7 @@ import Text from "../../components/text";
 import TokenSelector from "../../components/token-selector";
 import { ArrowDownIcon } from "../../icons/arrow-down";
 import "./impact-calculator.css";
+import { useCurrentPrice } from "./use-currentPrice";
 
 export type Option = {
   chainId: number;
@@ -32,6 +33,11 @@ export const ImpactCalculator = () => {
   const [isBuying, setIsBuying] = useState(true);
   const [value, setValue] = useState("10000");
   const [tokenSelected, setTokenSelected] = useState<Option>(binanceOption);
+
+  const {price} = useCurrentPrice({
+    token: tokenSelected.symbol.trim().toUpperCase(),
+    amount: value
+  })
 
   return (
     <section className="container">
