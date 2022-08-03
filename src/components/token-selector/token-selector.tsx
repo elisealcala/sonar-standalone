@@ -46,6 +46,7 @@ export const TokenSelector: FC<ITokenSelectorProps> = ({
         socket.on("search-coin-result", (response: any) => {
           if (response && response["result"]) {
             setSearchData(response.result);
+            console.log(response.result);
           }
         });
       }

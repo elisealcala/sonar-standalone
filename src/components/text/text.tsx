@@ -19,7 +19,7 @@ const styles: Record<Type, Style> = {
   titleSm: {
     fontSize: 20,
     lineHeight: "28px",
-    fontWeight: 400,
+    fontWeight: 500,
   },
   bodyM: {
     fontSize: 16,

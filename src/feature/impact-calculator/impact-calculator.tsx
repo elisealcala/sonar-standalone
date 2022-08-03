@@ -18,15 +18,15 @@ export type Option = {
 };
 
 const binanceOption = {
-  chainId: 56,
-  contractAddress: "bnb",
+  chainId: 1,
+  contractAddress: "0x4fabb145d64652a948d72533023f6e7a623c7c53",
   image:
-    "https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png?1547034615",
-  name: "Binance Coin",
-  percentagePrice: 5.48633,
-  price: 237.8,
-  symbol: "bnb",
-  volume: 1534065201,
+    "https://assets.coingecko.com/coins/images/9576/large/BUSD.png?1568947766",
+  name: "Binance USD",
+  percentagePrice: -0.01404,
+  price: 1,
+  symbol: "busd",
+  volume: 5838365643,
 };
 
 export const ImpactCalculator = () => {
@@ -34,15 +34,17 @@ export const ImpactCalculator = () => {
   const [value, setValue] = useState("10000");
   const [tokenSelected, setTokenSelected] = useState<Option>(binanceOption);
 
-  const {price} = useCurrentPrice({
+  const { price } = useCurrentPrice({
     token: tokenSelected.symbol.trim().toUpperCase(),
-    amount: value
-  })
+    amount: value,
+  });
+
+  console.log(price);
 
   return (
     <section className="container">
       <div className="title-container">
-        <Text>Calculate Impact</Text>
+        <Text type="titleSm">Calculate Impact</Text>
       </div>
       <div className="calculator-container">
         <div className="buy-sell-selection">
@@ -83,7 +85,9 @@ export const ImpactCalculator = () => {
         <Text className="price-title">
           {`New ${tokenSelected?.symbol.toUpperCase()} price`}
         </Text>
-        <Text type="title">0.0231</Text>
+        <Text type="title" className="price-variation">
+          0.0231
+        </Text>
         {isBuying ? (
           <Text className="percentage">+20%</Text>
         ) : (

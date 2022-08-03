@@ -1,9 +1,10 @@
 .cta-container {
 	display: flex;
 	flex-direction: column;
+	font-family: 'FK Grotesk';
 	color: #fff;
 	border-radius: 12px;
-	width: 284px;
+	width: 224px;
 	padding: 1rem 1.5rem;
 	background-color: rgba(0, 0, 0, 0.4);
 	background-image: url('/public/cta-background.png');
@@ -23,11 +24,15 @@
 	justify-content: space-between;
 }
 
-.cta-container button {
+.cta-container .title :first-child {
 	width: 80%;
+}
+
+.cta-container button {
+	width: 95%;
   height: 40px;
 	color: #fff;
-  border: solid 4px transparent;
+  border: solid 2px transparent;
   border-radius: 12px;
   background-image: linear-gradient(#000, #000), 
 	conic-gradient(from 90deg at 50% 50%, #EF18AE -9.1deg, #5A47D3 8.59deg, #35DF4B 171.41deg, #FFB200 188.48deg, #EF18AE 350.9deg, #5A47D3 368.59deg);
